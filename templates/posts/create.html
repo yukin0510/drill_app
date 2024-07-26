@@ -1,0 +1,19 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{% static 'css/posts.css' %}">
+  <title>Drill_App</title>
+</head>
+<body>
+  <h1>新規投稿ページ</h1>
+  <form method="POST">
+        {% csrf_token %}
+        {{ form.content }}
+    <button type="submit">送信</button>
+  </form>
+</body>
+</html>
